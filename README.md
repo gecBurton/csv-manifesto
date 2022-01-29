@@ -64,7 +64,7 @@ Some common examples are:
 
 3. Zero vs null, in the example given above Keith has no age and Priya has no children, a human
    understands that Keith's age is unknown but that Priya has zero children... or maybe she
-   does, but we don't know?
+   does, but we don't know about them?
 
 All of this means that whilst it is easy to produce a CSV it is very hard to consume it. A great
 deal of interpretation is required, this can be hard to do with a computer and is very prone to 
