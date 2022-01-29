@@ -56,7 +56,7 @@ Some common examples are:
 1. CSVs are often not comma delimited! Yes, even though CSV specifies only one thing, the comma,
    this is still open to interpretation. A good example of this is the UK's National-Health-
    Service's [public data downloads](https://assets.nhs.uk/prod/documents/NHS-Website-about-our-data-downloads.pdf)
-   which, staggeringly, uses the Windows-1252 encoding of ¬ to separate its variables. 
+   which, staggeringly, uses the [Windows-1252 encoding of ¬](https://bytetool.web.app/en/ascii/code/0xac/) to separate its variables. 
 
 2. Usually this first situation arises because the CSVs author wants to use the comma within a 
    variable, e.g. in the example above Keith has 2 middle names... or maybe he has one, and a child
