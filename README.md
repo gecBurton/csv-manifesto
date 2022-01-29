@@ -24,7 +24,7 @@ Here is an example CSV:
 
 ```csv
 first name, middle name(s), family name, children, age 
-     Priya,               ,         Das,         ,   5 
+     Priya,               ,         Das,         ,  32 
      Keith, Joe,   Edwarad,       James,        1,   
 ```
 
@@ -101,8 +101,8 @@ In this way our example CSV would be:
 
 ```csv
 "first name", "middle name(s)", "family name", "children", "age" 
-     "Priya",             null,         "Das",          0,    5 
-     "Keith", "Joe,   Edwarad",       "James",          1,  null 
+     "Priya",             null,         "Das",          0,   32 
+     "Keith", "Joe,   Edwarad",       "James",          1, null 
 ```
 
 and we can finally confirm that Priya has no children but that Keith's age is unknown!
