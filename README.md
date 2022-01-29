@@ -4,9 +4,7 @@ CSVs are everywhere. If you have ever exported data from a website, or transfere
 data between two systems, or consumed bespoke information from a business or a 
 doctor or a school then there is a good chance that that data was formatted as CSV. 
 
-And this can be a problem, because the CSV file format is notoriously hard to work with. 
-Countless hours and untold costs have been lost trying to work out how to interpret the
-contents of a CSV.
+This can be a problem, because the CSV format is notoriously hard to work with. 
 
 In this article I am going to explain what CSV is, why business users love it and why 
 technologists loathe it. I am going to argue that a sensible, low cost compromise 
@@ -30,35 +28,33 @@ first name, middle name(s), family name, children, age
 
 ## why CSV is good
 
-1. CSVs are easy to produce, all data tools can work with it, e.g. Excel. 
-2. CSVs look like the tables they represent. The use new-lines and commas to 
+1. CSV are easy to produce, all data tools can work with it, e.g. Excel. 
+2. CSV fomatted data looks like the tables they represent. The use new-lines and commas to 
    delimit rows and variables means that they can be easily read and edited by hand.
-3. CSVs are typically half the size of other common data formats such as `xml` or `json`.
-4. CSVs can be processed line-by-line without having to read the whole file at once. 
+3. CSV fomatted data is typically half the size of other common data formats such as `xml` or `json`.
+4. CSV can be processed line-by-line without having to read the whole file at once. 
    This is why they are the default format for loading large data files into databases. 
 
-All of this means that CSVs are great for ad-hoc data exchange: you give me some data
+All of this means that CSV is great for ad-hoc data exchange: you give me some data
 produced using your favourite software, and I can inspect it by eye and work out how 
 to load it into my system without much effort.
    
 ## why CSV is bad
 
-CSVs become a problem when they are used in automated processes. Because there is 
+CSV becomes a problem when it is used in automated processes. Because there is 
 no widely accepted working definition of what a CSV is this means that there is a
 lot of room for (miss)interpretation of what the data in a CSV means. 
 
 A long list of many of the pitfalls of CSVs can be found [here](https://donatstudios.com/Falsehoods-Programmers-Believe-About-CSVs).
-In 10 years of working with data in banks, healthcare, and aerospace I have personally come
-across at least half of these in the wild!
 
 Some common examples are:
 
-1. CSVs are often not comma delimited! Yes, even though CSV specifies only one thing, the comma,
+1. CSV is often not comma delimited! Yes, even though CSV specifies only one thing, the comma,
    this is still open to interpretation. A good example of this is the UK's National-Health-
    Service's [public data downloads](https://assets.nhs.uk/prod/documents/NHS-Website-about-our-data-downloads.pdf)
    which, staggeringly, uses the [Windows-1252 encoding of ¬](https://bytetool.web.app/en/ascii/code/0xac/) to separate its variables. 
 
-2. Usually this first situation arises because the CSVs author wants to use the comma within a 
+2. Usually this first situation arises because the author of the CSV wants to use the comma within a 
    variable, e.g. in the example above Keith has 2 middle names... or maybe he has one, and a child
    called James who is one year old... who knows?
 
@@ -72,12 +68,12 @@ error.
 
 ## CSV the means of production!
 
-It is a shame that we are in this mess because there is a lot to like about CSVs, moreover their 
+It is a shame that we are in this mess because there is a lot to like about CSV, moreover its 
 shortcomings should be easy to overcome. What we need is a formal definition of what a CSV is, 
 lets call it Strict-CSV, or `.scsv`, that is:
 
-* recognizably still a CSV, such that it works with existing tools
-* unambiguous to interpret
+* recognizably still CSV, such that it works with existing tools
+* unambiguous to read and write
 
 We wil base this on [JSON](https://datatracker.ietf.org/doc/html/rfc8259) which is a very
 successful human-readable data format widely used to exchange and store data.
@@ -114,9 +110,9 @@ some of them and why I don't think they are effective.
 
 * [rfc4180](https://datatracker.ietf.org/doc/html/rfc4180) This is the most common definition
   it is recommended by the [UK government](https://www.gov.uk/government/publications/recommended-open-standards-for-government/tabular-data-standard) 
-  amongst others. Its principle problem is that it is still far too ambiguous to be useful. 
+  amongst others. Its principle problem is that it is still too ambiguous to be useful. 
 
-* [CSV on the Web](https://www.w3.org/TR/tabular-data-primer/) far far far too complicated!
+* [CSV on the Web](https://www.w3.org/TR/tabular-data-primer/) far far too complicated!
 
 * [webcsv](https://eaglebush.github.io/webcsv/) this allows for more or less any CSV standard but
   requires that the standard is defined in a separate schema. Whilst this works it seems 
