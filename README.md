@@ -28,7 +28,7 @@ first name, middle name(s), family name, children, age
      Keith, Joe,   Edwarad,       James,        1,   
 ```
 
-## why CSVs are good
+## why CSV is good
 
 1. CSVs are easy to produce, all data tools can work with it, e.g. Excel. 
 2. CSVs look like the tables they represent. The use new-lines and commas to 
@@ -41,7 +41,7 @@ All of this means that CSVs are great for ad-hoc data exchange: you give me some
 produced using your favourite software, and I can inspect it by eye and work out how 
 to load it into my system without much effort.
    
-## why CSVs are bad
+## why CSV is bad
 
 CSVs become a problem when they are used in automated processes. Because there is 
 no widely accepted working definition of what a CSV is this means that there is a
