@@ -28,7 +28,7 @@ first name, middle name(s), family name, children, age
 
 ## why CSV is good
 
-1. CSV is easy, almost all data tools can work with it, e.g. Excel. 
+1. CSV is simple to produce, and almost all data tools support it, e.g. Excel. 
 2. CSV fomatted data looks like the tables they represent. The use new-lines and commas to 
    delimit rows and variables means that they can be easily read and edited by hand.
 3. CSV fomatted data is typically half the size of other common data formats such as `xml` or `json`.
