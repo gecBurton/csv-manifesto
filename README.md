@@ -22,16 +22,16 @@ Here is an example CSV:
 
 ```csv
 first name, middle name(s), family name, children, age 
-     Priya,               ,         Das,         ,  32 
-     Keith, Joe,   Edwarad,       James,        1,   
+Priya     ,               , Das        ,         ,  32 
+Keith     , Joe,   Edwarad, James      ,        1,   
 ```
 
 ## why CSV is good
 
 1. CSV is simple to produce, and almost all data tools support it, e.g. Excel. 
-2. CSV fomatted data looks like the tables they represent. The use new-lines and commas to 
+2. CSV formatted data looks like the tables they represent. The use new-lines and commas to 
    delimit rows and variables means that they can be easily read and edited by hand.
-3. CSV fomatted data is typically half the size of other common data formats such as `xml` or `json`.
+3. CSV formatted data is typically half the size of other common data formats such as `xml` or `json`.
 4. CSV can be processed line-by-line without having to read the whole file at once. 
    This is why they are the default format for loading large data files into databases. 
 
@@ -50,8 +50,7 @@ A long list of many of the pitfalls of CSVs can be found [here](https://donatstu
 Some common examples are:
 
 1. CSV is often not comma delimited! Yes, even though CSV specifies only one thing, the comma,
-   this is still open to interpretation. A good example of this is the UK's National-Health-
-   Service's [public data downloads](https://assets.nhs.uk/prod/documents/NHS-Website-about-our-data-downloads.pdf)
+   this is still open to interpretation. A good example of this is the UK National Health Service's [public data downloads](https://assets.nhs.uk/prod/documents/NHS-Website-about-our-data-downloads.pdf)
    which, staggeringly, uses the [Windows-1252 encoding of ¬](https://bytetool.web.app/en/ascii/code/0xac/) to separate its variables. 
 
 2. Usually this first situation arises because the author of the CSV wants to use the comma within a 
@@ -59,8 +58,7 @@ Some common examples are:
    called James who is one year old... who knows?
 
 3. Zero vs null, in the example given above Keith has no age and Priya has no children, a human
-   understands that Keith's age is unknown but that Priya has zero children... or maybe she
-   does, but we don't know about them?
+   understands that Keith's age is unknown but that Priya has zero children... or maybe she does have some but this data is missing?
 
 All of this means that whilst it is easy to produce a CSV it is very hard to consume it. A great
 deal of interpretation is required, this can be hard to do with a computer and is very prone to 
