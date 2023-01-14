@@ -2,13 +2,13 @@
 
 CSVs are everywhere. If you have ever exported data from a website, or transfered
 data between two systems, or consumed bespoke information from a business, 
-doctor or a school then there is a good chance that that data was formatted as CSV. 
+doctor or school then there is a good chance that that data was formatted as CSV. 
 
 This can be a problem, because the CSV format is notoriously hard to work with. 
 
 In this article I explain what CSV is, why business users love it and why 
 technologists loathe it. A sensible, low cost compromise 
-exists and that we should use it.
+exists, we should use it.
 
 ## what is CSV?
 
