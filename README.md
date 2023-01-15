@@ -73,23 +73,23 @@ lets call it Strict-CSV, or `.scsv`, that is:
 * recognizably still CSV, such that it works with existing tools
 * unambiguous to read and write
 
-We wil base this on [JSON](https://datatracker.ietf.org/doc/html/rfc8259) which is a very
+We will base this on [JSON](https://datatracker.ietf.org/doc/html/rfc8259) which is a very
 successful human-readable data format widely used to exchange and store data.
 
 Our definition is:
 
-1. `.scsv` is [utf8](https://en.wikipedia.org/wiki/UTF-8) encoded
-2. rows are new-line, `\n`, delimited
-3. variables are comma, `,`, delimited
-4. all variables are encoded as JSON primitives, e.g:
+1. The file is [utf8](https://en.wikipedia.org/wiki/UTF-8) encoded. 
+2. Rows are new-line, `\n`, delimited. 
+3. Variables are comma, `,`, delimited. 
+4. All variables are encoded as JSON primitives, e.g:
    1. integers: `1`, `2`, `-3`
    2. floats: `1.2`, `-0.3`, `1e5`
    3. strings: `"my name is \"George\", I have 2 brothers"`
    4. booleans: `true`, `false`
    5. none: `null` 
-5. all rows will have the same number of variables
-6. the first row will be considered as the header
-7. the first row will have unique elements
+5. All rows will have the same number of variables. 
+6. The first row will be considered as the header. 
+7. The first row will have unique elements. 
 
 In this way our example CSV would be:
 
@@ -106,17 +106,17 @@ and we can finally confirm that Priya has no children but that Keith's age is un
 Unsurprisingly there exist many alternative definitions of what a CSV should be. Here are
 some of them and why I don't think they are effective.
 
-* [rfc4180](https://datatracker.ietf.org/doc/html/rfc4180) This is the most common definition
-  it is recommended by the [UK government](https://www.gov.uk/government/publications/recommended-open-standards-for-government/tabular-data-standard) 
+* [rfc4180](https://datatracker.ietf.org/doc/html/rfc4180) is the most common definition. 
+  It is recommended by the [UK government](https://www.gov.uk/government/publications/recommended-open-standards-for-government/tabular-data-standard) 
   amongst others. Its principle problem is that it is still too ambiguous to be useful. 
 
-* [CSV on the Web](https://www.w3.org/TR/tabular-data-primer/) far far too complicated!
+* [CSV on the Web](https://www.w3.org/TR/tabular-data-primer/) is far far too complicated!
 
-* [webcsv](https://eaglebush.github.io/webcsv/) this allows for more or less any CSV standard but
+* [webcsv](https://eaglebush.github.io/webcsv/) allows for more or less any CSV standard but
   requires that the standard is defined in a separate schema. Whilst this works it seems 
   excessively burdensome for what should be a simple data-encoding.
 
-* [ndjson](https://github.com/ndjson/ndjson-spec) this is very similar to what is being 
+* [ndjson](https://github.com/ndjson/ndjson-spec) is very similar to what is being 
   proposed in this article but it is neither recognizably a CSV nor is it necessarily tabular.
 
 
