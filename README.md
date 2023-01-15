@@ -28,12 +28,12 @@ Keith     , Joe,   Edwarad, James      ,        1,
 
 ## why CSV is good
 
-1. CSV is simple to produce, almost all data tools support it, e.g. Excel. 
+1. CSV is simple to produce, most tools support it, e.g. Excel. 
 2. CSV formatted data looks like the table it represents. The use of new-lines and commas to 
-   delimit rows and variables means that they can be easily read and edited by hand.
+   delimit rows and variables means that it can easily be read and edited by hand.
 3. CSV formatted data is typically half the size of other common data formats such as `xml` or `json`.
 4. CSV can be processed line-by-line without having to read the whole file at once. 
-   This is why they are the default format for loading large data files into databases. 
+   This is why it is the default format for loading large data files into databases. 
 
 All of this means that CSV is great for ad-hoc data exchange: you give me some data
 produced using your favourite software, and I can inspect it by eye and work out how 
