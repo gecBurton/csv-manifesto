@@ -243,4 +243,3 @@ some of them and why I don't think they are effective.
   proposed in this article but it is neither recognizably a CSV nor is it necessarily tabular.
 
 
-
